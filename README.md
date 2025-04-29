@@ -1,124 +1,124 @@
-🕵️‍♂️ Why Use This?
-The internet tracks you — your IP address reveals your location, your device, and even your identity over time.
+🧅 Tor IP Rotator — Become Invisible Online
+Want to hide your real IP and browse like a ghost?
+This script auto-rotates your IP using the Tor network, giving you total privacy and country-level anonymity — every 3 seconds.
 
-With this script:
+Perfect for:
 
-🌍 You become anonymous by routing traffic through the Tor network.
+🕵️ Ethical hackers
 
-🔁 Your IP rotates every few seconds — like a digital invisibility cloak.
+🧠 OSINT analysts
 
-🧠 You gain insight into how privacy tools like Tor, SOCKS proxies, and geolocation really work.
+🧼 Privacy advocates
 
-🛡️ Use it as a foundation for anonymous scraping, testing, or private browsing automation.
+🧪 Web testers & scrapers
 
-✨ Features
-🔄 Rotates your public IP address automatically via Tor
+🌍 What It Does
+✅ Changes your IP address every few seconds
+✅ Shows the new IP and its country of origin
+✅ Uses the Tor network to anonymize your traffic
+✅ Keeps running until you stop it manually
+✅ Works on macOS, Kali Linux, and Windows
 
-🌐 Shows your IP and the full name of its country of origin
+🛠 Installation Guide
+1. Install Tor
+macOS (via Homebrew)
 
-🕓 Changes identity every 3 seconds
-
-⚙️ Fully customizable — adjust interval, proxy config, or exit nodes
-
-💻 Works on macOS, Kali Linux, and Windows
-
-🔧 Prerequisites
-Python 3.7+
-
-Tor installed and running
-
-torrc configured to allow control (port 9051)
-
-Required libraries:
-
-requests
-
-stem
-
-pycountry
-
-🛠 Installation & Setup Guide
-1️⃣ Clone or Download the Script
-You can download the .zip or clone using Git:
-
-bash
-Copy
-Edit
-git clone https://github.com/your-username/tor-ip-rotator.git
-cd tor-ip-rotator
-2️⃣ Install Required Python Libraries
-bash
-Copy
-Edit
-pip install requests stem pycountry
-3️⃣ Install & Start Tor
-macOS (Homebrew)
-bash
-Copy
-Edit
 brew install tor
 brew services start tor
 Kali Linux / Debian
-bash
-Copy
-Edit
+
 sudo apt update
 sudo apt install tor
 sudo systemctl start tor
 sudo systemctl enable tor
 Windows
 Download the Tor Expert Bundle:
-🔗 https://www.torproject.org/download/tor/
+https://www.torproject.org/download/tor/
 
-Extract the folder and run tor.exe
+Extract and run tor.exe
 
-4️⃣ Configure the torrc File
-🗂️ Location:
+2. Configure torrc File
+Location:
 
 macOS/Linux: /usr/local/etc/tor/torrc or /etc/tor/torrc
 
-Windows: in same folder as tor.exe
+Windows: Inside your extracted Tor folder
 
-📝 Add this:
+Add these lines:
 
-yaml
-Copy
-Edit
 ControlPort 9051
 CookieAuthentication 1
-Or (if using password auth):
+Or for password auth:
 
-php-template
-Copy
-Edit
 ControlPort 9051
 HashedControlPassword <your-password-hash>
-🔐 Generate password hash:
+To create a hash:
 
-bash
-Copy
-Edit
 tor --hash-password your_secure_password
-5️⃣ Restart Tor After Configuration
-bash
-Copy
-Edit
+Then restart Tor:
+
 # macOS
 brew services restart tor
 
 # Linux
 sudo systemctl restart tor
-Windows: Close and reopen tor.exe
+3. Install Required Python Packages
 
-🚀 Run the Script
-bash
+pip install -r requirements.txt
+Contents of requirements.txt:
+
+nginx
 Copy
 Edit
-python tor_ip_rotator.py
+requests
+stem
+pycountry
 
+# Tor must be installed manually (see instructions above)
 
-Example Output
+4. Run the Script
+   
+python3 tor_ip_rotator.py
+
+Sample output:
 
 [1] Current IP: 185.220.101.47 | Country: Germany
 [2] Current IP: 199.249.230.72 | Country: United States
-[3] Current IP: 185.100.87.202 | Country: Netherlands
+🌐 Bonus: Route Firefox Through Tor
+Want to make Firefox anonymous too? Follow these steps:
+
+Open Firefox.
+
+Go to about:preferences.
+
+Scroll to Network Settings → Click Settings....
+
+Choose Manual proxy configuration and enter:
+
+
+SOCKS Host: 127.0.0.1
+Port: 9050
+✅ Check: "Proxy DNS when using SOCKS v5"
+
+Now, all your Firefox traffic is routed through Tor — just like your Python script!
+
+🧪 Use Cases
+Anonymous browsing
+
+IP rotation for scraping
+
+OSINT investigations
+
+Tor network testing
+
+Geo-based content access
+
+🛑 Stop the Script
+To stop it, press:
+
+Ctrl + C
+
+🔐 Stay Private, Stay Safe
+
+Tor IP Rotator doesn’t just rotate IPs — it empowers you with anonymity. Whether you're evading trackers, researching in secret, or testing applications globally — this tool makes your digital life borderless.
+
