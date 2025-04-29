@@ -83,7 +83,9 @@ python3 tor_ip_rotator.py
 Sample output:
 
 [1] Current IP: 185.220.101.47 | Country: Germany
+
 [2] Current IP: 199.249.230.72 | Country: United States
+
 🌐 Bonus: Route Firefox Through Tor
 Want to make Firefox anonymous too? Follow these steps:
 
